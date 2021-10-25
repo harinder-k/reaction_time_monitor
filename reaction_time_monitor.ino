@@ -18,7 +18,9 @@ long ledOnDelay;
 
 void setup() {
   Serial.begin(19200);
-  
+
+  Serial.println("Welcome to the reaction time monitor!");
+
   pinMode(LED_PIN, OUTPUT);
   pinMode(BTN_PIN, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(BTN_PIN), recordReaction, RISING);
